@@ -47,6 +47,9 @@ class Ball implements Color {
 
   }
 
+  public void change() {
+    System.out.println("공 색상을 변경하겠습니다.");
+  }
 }
 
 public class Ex30_BallMain {
@@ -55,7 +58,23 @@ public class Ex30_BallMain {
 
   public static void main(String[] args) {
 
-    Ball myBall = new
+    Ball myBall = Ball.getInstance();
+
+    // 정수로 직접 입력
+    myBall.info(1);
+    myBall.info(2);
+    myBall.info(3);
+    myBall.info(4);
+    myBall.info(5);
+
+    System.out.println("-------------");
+
+    // final 상수값을 이용하여 info() 메소드 호출
+    myBall.info(Color.RED);
+    myBall.info(Color.BLUE);
+    myBall.info(Color.GREEN);
+    myBall.info(Color.YELLOW);
+    myBall.info(Color.ORANGE);
 
     // 스태틱 메소드 main 에서는 멤버변수 num을 static 처리해야 사용할 수 있다.
     System.out.println(num);
