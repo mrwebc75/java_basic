@@ -83,7 +83,7 @@ class Villain implements Fight, Move {
 
   @Override
   public void attact() {
-    System.out.println(this.name + " >> 공격하다");
+    System.out.println(this.name + " >> 공격(Hoi)하다");
   }
 
   @Override
@@ -102,6 +102,19 @@ public class Ex60_Marble {
     thor.run();
     thor.attact();
     thor.shield();
+
+    System.out.println("-------------");
+
+    Villain duly = new Villain("둘리");
+    duly.walk();
+    duly.run();
+    duly.attact();
+    duly.shield();
+
+    System.out.println("-------------");
+
+    thor.jump();
+    thor.weapon();
   }
 
 }
