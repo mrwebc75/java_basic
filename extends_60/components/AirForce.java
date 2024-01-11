@@ -3,7 +3,7 @@ package extends_60.components;
 public class AirForce extends Unit {
 
   public AirForce(String name) {
-    super(name);
+    super(name);//부모의 생성자를 호출
   }
 
   @Override

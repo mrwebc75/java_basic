@@ -3,7 +3,7 @@ package extends_60.components;
 public class Navy extends Unit {
 
   public Navy(String name) {
-    super(name);
+    super(name);//부모의 생성자를 호출
   }
 
   @Override
