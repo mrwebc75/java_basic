@@ -13,6 +13,9 @@ public class Ex40_Calendar {
     Calendar cal = new GregorianCalendar();// 다른시간대의 날짜와 시간을 출력할 수 있다.
     // Calendar cal = Calendar.getInstance();// 현재시간 정보를 가진 객체 생성
 
+    // 날짜와 시간을 아래와 같이 설정
+    cal.set(2002, 3, 5, 10, 30, 25);// 월은 0~11 이기 때문에 1 작은수를 입력해야 함
+
     System.out.println("1." + cal);
 
     // 년월일 - .get(상수) 메소드를 사용하면 int 타입으로 리턴
