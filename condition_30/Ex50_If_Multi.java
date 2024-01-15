@@ -11,7 +11,7 @@ public class Ex50_If_Multi {
     Scanner sc = new Scanner(System.in);
     int score = sc.nextInt();
 
-    if (score > 90 && score <= 100) {
+    if (score >= 90 && score <= 100) {
       System.out.println("A학점");
     } else if (score >= 80 && score < 90) {
       System.out.println("B학점");

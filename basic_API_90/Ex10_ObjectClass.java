@@ -1,4 +1,4 @@
-package basic_class_90;
+package basic_API_90;
 
 import extends_60.components.Army;
 
@@ -40,10 +40,9 @@ public class Ex10_ObjectClass extends Object {
     }
 
     /*
-     * Object 클래스의 equals()는 '=='로 비교한것과 같은 결과이다.
-     * 즉, 기본적으로 주소값이 동등한지 비교한다.
-     * 하지만 하위클래스에서 얼마든지 Override 할 수 있다.
-     * 대표적으로 String 클래스는 문자열 값을 비교할 수 있도록 toString() 메소드를 오버라이딩 했다.
+     * Object 클래스의 equals()는 '=='로 비교한것과 같은 결과이다. 즉, 기본적으로 주소값이 동등한지 비교한다. 하지만
+     * 하위클래스에서 얼마든지 Override 할 수 있다. 대표적으로 String 클래스는 문자열 값을 비교할 수 있도록 toString()
+     * 메소드를 오버라이딩 했다.
      */
 
     // .equals() 메소드를 이용한 참조(주소)값 비교 -> false
