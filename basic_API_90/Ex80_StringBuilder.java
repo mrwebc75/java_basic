@@ -7,13 +7,14 @@ public class Ex80_StringBuilder {
     // 실험1 - String
     String result = "";
 
-    long startTime = System.currentTimeMillis();// 시작시간
+    long startTime = System.nanoTime();// 시작시간
 
-    for (int i = 0; i < 100000; i++) {
-      result += "duly,";
+    for (int i = 0; i < 10000; i++) {
+      // result += "duly,";
+      result = result.concat("duly,");
     }
 
-    long endTime = System.currentTimeMillis();// 끝나는시간
+    long endTime = System.nanoTime();// 끝나는시간
 
     long duration = endTime - startTime;// 작업시간 = 끝나는시간 - 시작시간
 
@@ -24,13 +25,13 @@ public class Ex80_StringBuilder {
     // 동기화를 고려하지 않기 때문에 StringBuffer보다 조금 더 빠르다.
     StringBuilder sb = new StringBuilder();
 
-    startTime = System.currentTimeMillis();
+    startTime = System.nanoTime();
 
-    for (int i = 0; i < 100000; i++) {
+    for (int i = 0; i < 10000; i++) {
       sb.append("duly,");
     }
 
-    endTime = System.currentTimeMillis();
+    endTime = System.nanoTime();
     duration = endTime - startTime;
 
     result = sb.toString();
