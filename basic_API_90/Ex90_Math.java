@@ -16,6 +16,15 @@ public class Ex90_Math {
     System.out.println(myRandom(1, 10));// 1~10
     System.out.println(myRandom(11, 20));// 11~20
 
+    // myRandom() 메소드를 활용하여 5자리 인증번호 생성하기(응용예제)
+    String certiNum = "";
+
+    for (int i = 0; i < 5; i++) {
+      certiNum += myRandom(0, 9);
+    }
+
+    System.out.println("인증번호 = " + certiNum);
+
     // 주어진 두 수중 최대값 구하기
     int max = Math.max(100, 9999);
     System.out.println("max = " + max);
