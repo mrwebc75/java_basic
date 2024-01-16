@@ -66,25 +66,21 @@ public class Ex10_ArrayList {
     nameArrStream.forEach((name) -> {
       System.out.println(name);
     });
-    
 
     System.out.println("--------------------");
-    //문제) arrName 원소의 글자수를 stream을 이용하여 출력
+    // 문제) arrName 원소의 글자수를 stream을 이용하여 출력
     Stream<String> nameStream = Arrays.stream(arrName);
-    nameStream.forEach(name->{
-      System.out.printf("%s는 %d글자\n", name, name.length());
+
+    // 방법2 - 중간처리 메소드 map()을 이용
+    nameStream.map((name) -> {
+      return name.length();
+    }).forEach((cnt) -> {
+      System.out.println(cnt + "글자");
     });
+
+    // 방법1
+    // nameStream.forEach(name->{
+    // System.out.printf("%s는 %d글자\n", name, name.length());
+    // });
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
