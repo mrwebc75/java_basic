@@ -52,30 +52,16 @@ public class Ex30_HashSet {
       if (lottoPaper.size() == 6)
         break;
 
-    }//end of while
+    } // end of while
 
-    //로또번호 출력
-    for(int num : lottoPaper) {
+    // 로또번호 출력
+    for (int num : lottoPaper) {
       System.out.printf("%d\t", num);
     }
-    
+
     System.out.println("\n\n-----Stream 으로 출력-----");
     Stream<Integer> lottoStream = lottoPaper.stream();
-    lottoStream.forEach(num->System.out.printf("%d\t", num));
+    lottoStream.forEach(num -> System.out.printf("%d\t", num));
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
