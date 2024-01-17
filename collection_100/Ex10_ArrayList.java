@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+//ArrayList는 데이터의 중복을 허용한다.
 public class Ex10_ArrayList {
 
   public static void main(String[] args) {
@@ -20,6 +21,25 @@ public class Ex10_ArrayList {
     arrList.add("또치");
     arrList.add("도우너");
     arrList.add("마이콜");
+    arrList.add("또치");
+
+    arrList.set(0, "hani");// 수정
+
+    // 인덱스값 알아보기
+    System.out.println("또치의 index = " + arrList.indexOf("또치"));// 맨처음 발견된 아이템의 index 1
+    System.out.println("또치의 마지막 index = " + arrList.lastIndexOf("또치"));// 맨마지막 발견된 아이템의 index 4
+
+    // 특정 데이터값의 포함여부
+    if (arrList.contains("마이콜")) {
+      System.out.println("arrList의 원소중 \"마이콜\"이 있습니다.");
+    }
+
+    // arrList.clear();// 초기화
+
+    // 비어있는지 확인
+    if (arrList.isEmpty()) {
+      System.out.println("arrList는 비어 있습니다.");
+    }
 
     System.out.println("arrList = " + arrList);
 
@@ -72,6 +92,7 @@ public class Ex10_ArrayList {
     Stream<String> nameStream = Arrays.stream(arrName);
 
     // 방법2 - 중간처리 메소드 map()을 이용
+    // map()은 모든 아이템에 공통적인 작업을 하여 그 결과를 새로운 스트림으로 리턴
     nameStream.map((name) -> {
       return name.length();
     }).forEach((cnt) -> {
@@ -82,5 +103,25 @@ public class Ex10_ArrayList {
     // nameStream.forEach(name->{
     // System.out.printf("%s는 %d글자\n", name, name.length());
     // });
+
+    System.out.println("----------이름 글자수가 3 이상이면 출력----------");
+    // 문제) 이름 글자수가 3 이상이면 출력
+
+    // 한번 사용한 스트림은 재사용 할 수 없다는 규칙
+    Stream<String> letterStream = Arrays.stream(arrName);
+
+    // 방법2
+    // filter()는 모든 아이템에 공통조건을 적용하여 true인 아이템만을 모아 새로운 스트림으로 리턴
+    letterStream.filter(letter -> {
+      return letter.length() >= 3;
+    }).forEach(name -> System.out.println(name));
+
+    // 방법1
+//    letterStream.forEach(name -> {
+//      if (name.length() >= 3) {
+//        System.out.println(name);
+//      }
+//    });
+
   }
 }
