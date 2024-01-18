@@ -1,10 +1,22 @@
 package exception_110;
 
+//다중 예외처리를 설명하는 예제
 public class Ex50_MultiExceptionHandling {
 
-  public static void main(String[] args) {
+  // main() 함수를 호출하는 곳으로 ClassNotFoundException에한 예외처리 떠넘기기
+  public static void main(String[] args) throws ClassNotFoundException {
 
     String msg = null;
+
+    // 에러 강제 발생
+    if (msg != null) {
+      throw new ArrayIndexOutOfBoundsException();// RuntimeException
+    }
+
+    if (false) {
+      throw new ClassNotFoundException();
+    }
+
     int a = 100;
     int b = 0;
 
