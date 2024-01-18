@@ -3,6 +3,7 @@ package collection_100;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /*
@@ -62,29 +63,41 @@ public class Ex50_CollectionStream {
     // 5. 리스트컬렉션에 여러개의 People 객체를 저장하시오.
     List<People> peopleList = new ArrayList<People>();
 
-    for(int i=0; i<10; i++) {
-      People people = new People("익명_"+i, "010-1234-567"+i);    
-      peopleList.add(people);      
+    for (int i = 0; i < 10; i++) {
+      People people = new People("익명_" + i, "010-1234-567" + i);
+      peopleList.add(people);
     }
-    
-    System.out.println("\n\npeopleList의 크기는 "+peopleList.size());
-    
-    
+
+    System.out.println("\n\npeopleList의 크기는 " + peopleList.size());
+
     // 6. peopleList에 저장된 데이터를 출력하시오.
-    for(People p : peopleList) {
+    for (People p : peopleList) {
       System.out.println(p.toString());
     }
-    
+
+    peopleList.clear();// 초기화
+
+    System.out.println();
+
+    // 5-1
+    // IntStream.rangeClosed(0, 10).forEach(num->System.out.println(num));
+    peopleList = IntStream.range(0, 10).mapToObj((i) -> {
+      People people = new People("익명_" + i, "010-1234-567" + i);
+      return people;
+    }).collect(Collectors.toList());
+
+    // 6-1
+    peopleList.forEach(p -> System.out.println(p.toString()));
+
+    peopleList.clear();// 초기화
+    System.out.println();
+
+    // 5,6과정을 통합
+    IntStream.range(0, 10).mapToObj((i) -> {
+      People people = new People("익명_" + i, "010-1234-567" + i);
+      return people;
+    }).collect(Collectors.toList()).forEach(p -> System.out.println(p.toString()));
+
   }// end of main
 
 }
-
-
-
-
-
-
-
-
-
-
