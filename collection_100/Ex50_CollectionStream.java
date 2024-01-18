@@ -76,7 +76,6 @@ public class Ex50_CollectionStream {
     }
 
     peopleList.clear();// 초기화
-
     System.out.println();
 
     // 5-1
@@ -92,7 +91,7 @@ public class Ex50_CollectionStream {
     peopleList.clear();// 초기화
     System.out.println();
 
-    // 5,6과정을 통합
+    // 5-1,6-1과정을 통합
     IntStream.range(0, 10).mapToObj((i) -> {
       People people = new People("익명_" + i, "010-1234-567" + i);
       return people;
