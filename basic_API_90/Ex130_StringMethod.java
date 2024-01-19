@@ -103,7 +103,7 @@ public class Ex130_StringMethod {
     System.out.println("sub_str2 = " + sub_str2);// Programming
     System.out.println("------------------------------");
 
-    // 9. 문자열을 특정 "구분자"를 기준으로 잘래내서 배열로 반환하는 .split()
+    // 9. 문자열을 특정 "구분자"를 기준으로 잘라내서 배열로 반환하는 .split()
     String subject = "웹표준/JavaScript/Git/Java/Database/JSP";
     String[] arrSubject = subject.split("/");
 
