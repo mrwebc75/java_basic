@@ -59,6 +59,19 @@ public class MainController {
         // 전체회원정보 목록 출력
         lstSrv.printMemberList();
 
+      } else if (userInput.startsWith("info")) {
+
+        // 유효성검사 - 전달받은 정보의 개수를 확인
+        if (userInputs.length != 2) {
+          System.out.println("입력하신 정보가 형식에 맞지 않습니다.");
+          help();
+          continue;
+        }
+
+        // MemberInfoService 에서 printMember(email)호출
+        MemberInfoService infoSrv = new MemberInfoService();
+        infoSrv.printMember(userInputs[1]);
+
       } // end of if
 
     } // end of while
