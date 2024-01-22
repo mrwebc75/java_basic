@@ -48,8 +48,9 @@ public class MainController {
           System.out.println("입력하신 비번이 일치하지 않습니다.");
           continue;
         }
-        
-        
+
+        MemberRegisterSerivce regSrv = new MemberRegisterSerivce();
+        regSrv.regist(dto);
 
       } // end of if
 
