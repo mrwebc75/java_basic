@@ -52,6 +52,13 @@ public class MainController {
         MemberRegisterSerivce regSrv = new MemberRegisterSerivce();
         regSrv.regist(dto);
 
+      } else if (userInput.compareToIgnoreCase("list") == 0) {
+
+        MemberListService lstSrv = new MemberListService();
+
+        // 전체회원정보 목록 출력
+        lstSrv.printMemberList();
+
       } // end of if
 
     } // end of while
