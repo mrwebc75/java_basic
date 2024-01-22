@@ -71,7 +71,7 @@ public class Ex130_StringMethod {
       System.out.println("다르다~!");
     }
 
-    // 문자열이 특정값을 시작하는지, 끝나는지 확인 -> true/false
+    // 문자열이 특정값으로 시작하는지, 끝나는지 확인 -> true/false
     if (str1.startsWith("자바")) {
       System.out.println("str1은 \"자바\"로 시작합니다.");
     }
@@ -112,19 +112,16 @@ public class Ex130_StringMethod {
     System.out.println("------------------------------");
 
     /*
-       여러가지 문자열 포맷(출력서식)
-        
-       %d - 정수(digital) 
-       %2d - 2자리로 맞춰서 출력, 자릿수가 남으면 공백으로 출력됨 
-       %02d - 남는 자릿수를 0으로 채워서
-       출력됨
-        
-        
-       %s - 문자열(string) 
-        
-       %f - 실수형(float)
-       %.1f - 소수점 1자까지 출력
-
+     * 여러가지 문자열 포맷(출력서식)
+     * 
+     * %d - 정수(digital) %2d - 2자리로 맞춰서 출력, 자릿수가 남으면 공백으로 출력됨 %02d - 남는 자릿수를 0으로 채워서
+     * 출력됨
+     * 
+     * 
+     * %s - 문자열(string)
+     * 
+     * %f - 실수형(float) %.1f - 소수점 1자까지 출력
+     * 
      */
 
     int year = 2024;
@@ -136,22 +133,11 @@ public class Ex130_StringMethod {
 
     System.out.printf("%d년 %02d월 %02d일 %s의 키는 %.1f이다.", year, month, date, name, height);
     System.out.println("\n------------------------------");
-    
+
     // 10. 출력할 데이터를 특정 형식에 맟춘 새로운 문자열을 리턴해주는 String.format()
     // sdf.format()과 매우 유사하다.(Ex60번 참고)
-    String result = String.format("%d년 %02d월 %02d일 %s의 키는 %.1f이다.", year, month, date, name, height);
+    String result = String.format("%d년 %02d월 %02d일 %s의 키는 %.1f이다.", year, month, date, name,
+        height);
     System.out.println("result = " + result);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
