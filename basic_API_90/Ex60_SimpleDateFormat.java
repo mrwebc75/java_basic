@@ -9,7 +9,7 @@ import java.util.Date;
    
      SimpleDateFormat sdf = new SimpleDateFormat("포맷형식");
      
-     1. 포맷형식 yyyy-MM-dd E HH:mm:dd
+     1. 포맷형식 yyyy-MM-dd E HH:mm:ss
      
        yyyy - 4자리 연도
        MM - 2자리 월
