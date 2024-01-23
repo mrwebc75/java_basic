@@ -85,9 +85,21 @@ public class MainController {
         MemberPwdChangeService changeSrv = new MemberPwdChangeService();
         changeSrv.changePwd(userInputs);
 
+      } else if (userInput.compareToIgnoreCase("help") == 0) {
+        help();
+
+      } else if (userInput.compareToIgnoreCase("exit") == 0) {
+        System.out.println("프로그램을 종료합니다.");
+        break;
+
+      } else {
+        System.out.println("잘못된 명령어 입니다.");
+        help();
       } // end of if
 
     } // end of while
+
+    sc.close();
 
   }// end of main
 }
