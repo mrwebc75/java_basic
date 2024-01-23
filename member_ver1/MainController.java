@@ -72,6 +72,19 @@ public class MainController {
         MemberInfoService infoSrv = new MemberInfoService();
         infoSrv.printMember(userInputs[1]);
 
+        // change 이메일 현재암호 변경암호
+      } else if (userInput.startsWith("change")) {
+
+        // 유효성검사 - 전달받은 정보의 개수를 확인
+        if (userInputs.length != 4) {
+          System.out.println("입력하신 정보가 형식에 맞지 않습니다.");
+          help();
+          continue;
+        }
+
+        MemberPwdChangeService changeSrv = new MemberPwdChangeService();
+        changeSrv.changePwd(userInputs);
+
       } // end of if
 
     } // end of while
