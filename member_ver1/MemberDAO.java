@@ -24,4 +24,9 @@ public class MemberDAO {
     return memMap.values();
   }// end of selectList
 
+  // 회원정보 수정
+  public void update(MemberVO vo) {
+    memMap.put(vo.getEmail(), vo);
+  }
+
 }
